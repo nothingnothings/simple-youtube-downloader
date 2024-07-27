@@ -20,9 +20,9 @@ Ensure you have Python installed on your system. You can download it from [pytho
 
 Install the `yt-dlp` package using `pip`. Open a Command Prompt or Terminal and run:
 
-'''
+```
 pip install yt-dlp
-'''
+```
 
 ### 3. Install `ffmpeg`
 

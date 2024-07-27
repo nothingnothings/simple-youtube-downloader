@@ -115,7 +115,7 @@ if __name__ == "__main__":
 * Create a file named `youtube-urls.txt` in the same directory as your script.
 * List each YouTube URL on a new line in this file.
 
-1. **Run the Script** :
+2. **Run the Script** :
 
 * Open Command Prompt or Terminal.
 * Navigate to the directory where `download_youtube_videos.py` is located.

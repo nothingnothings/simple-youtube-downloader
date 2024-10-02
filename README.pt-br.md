@@ -1,60 +1,60 @@
 # YouTube Video Downloader
 
-## Overview
+## Visão Geral
 
-This Python script downloads YouTube videos from a list of URLs provided in a text file. It uses `yt-dlp`, a powerful and flexible tool for downloading videos from YouTube and other platforms, and requires `ffmpeg` for handling video and audio merging.
+Este script em Python baixa vídeos do YouTube a partir de uma lista de URLs fornecidas em um arquivo de texto. Ele utiliza o `yt-dlp`, uma ferramenta poderosa e flexível para baixar vídeos do YouTube e outras plataformas, e requer o `ffmpeg` para a mesclagem de vídeo e áudio.
 
-## Features
 
-* Downloads videos from YouTube URLs listed in a text file.
-* Saves videos in the specified directory.
-* Merges video and audio into a single MP4 file if necessary.
+## Destaques
 
-## Installation
+* Baixa vídeos de URLs do YouTube listadas em um arquivo de texto.
+* Salva os vídeos no diretório especificado.
 
-### 1. Install Python
+## Instalação
 
-Ensure you have Python installed on your system. You can download it from [python.org](https://www.python.org/downloads/). During installation, make sure to check the option to "Add Python to PATH".
+### 1. Instale o Python
 
-### 2. Install `yt-dlp`
+Certifique-se de ter o Python instalado em seu sistema. Você pode baixá-lo em [python.org](https://www.python.org/downloads/). Durante a instalação, verifique a opção para "Adicionar Python ao PATH".
 
-Install the `yt-dlp` package using `pip`. Open a Command Prompt or Terminal and run:
+### 2. Instale o `yt-dlp`
+
+Instale o pacote `yt-dlp` usando `pip`. Abra um Prompt de Comando ou Terminal e execute:
 
 ```
 pip install yt-dlp
 ```
 
-### 3. Install `ffmpeg`
+### 3. Instale o `ffmpeg`
 
-`ffmpeg` is required for merging video and audio streams. Follow these steps to install it:
+O `ffmpeg` é necessário para mesclar streams de vídeo e áudio. Siga estes passos para instalá-lo:
 
-1. **Download `ffmpeg`** :
+1. **Baixe o `ffmpeg`**:
 
-* Visit [FFmpeg&#39;s official download page](https://ffmpeg.org/download.html) and download the Windows builds from a trusted source like [Gyan.dev]().
+* Visite [a página oficial de downloads do FFmpeg](https://ffmpeg.org/download.html) e baixe as versões para Windows de uma fonte confiável, como [Gyan.dev](https://www.gyan.dev/ffmpeg/).
 
-2. **Extract the ZIP File** :
+2. **Extraia o Arquivo ZIP**:
 
-* Extract the ZIP file to a location on your computer, e.g., `C:\ffmpeg`.
+* Extraia o arquivo ZIP para um local em seu computador, como, por exemplo, `C:\ffmpeg`.
 
-3. **Add `ffmpeg` to System PATH** :
+3. **Adicione o `ffmpeg` ao PATH do Sistema**:
 
-* Press `Win + X` and select `System`.
-* Click on `Advanced system settings`.
-* Click on `Environment Variables`.
-* Under `System variables`, find the `Path` variable and click `Edit`.
-* Click `New` and add the path to the `bin` directory inside the extracted `ffmpeg` folder (e.g., `C:\ffmpeg\bin`).
-* Click `OK` to save and close all dialogs.
+* Pressione `Win + X` e selecione `Sistema`.
+* Clique em `Configurações avançadas do sistema`.
+* Clique em `Variáveis de Ambiente`.
+* Em `Variáveis do sistema`, encontre a variável `Path` e clique em `Editar`.
+* Clique em `Novo` e adicione o caminho para o diretório `bin` dentro da pasta extraída do `ffmpeg` (por exemplo, `C:\ffmpeg\bin`).
+* Clique em `OK` para salvar e fechar todos os diálogos.
 
-4. **Verify `ffmpeg` Installation** :
+4. **Verifique a Instalação do `ffmpeg`**:
 
-* Open Command Prompt and run:
+* Abra o Prompt de Comando e execute:
 ```
 ffmpeg -version
 ```
 
-### 4. Download the Script
+### 4. Faça o Download do Script
 
-Save the following script as `download_youtube_videos.py`:
+Salve o seguinte script como `download_youtube_videos.py`:
 
 <pre><div class="dark bg-gray-950 rounded-md border-[0.5px] border-token-border-medium"><div class="flex items-center relative text-token-text-secondary bg-token-main-surface-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md"><div class="flex items-center"><span class="" data-state="closed"><button class="flex gap-1 items-center"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" class="icon-sm"><path fill="currentColor" fill-rule="evenodd" d="M7 5a3 3 0 0 1 3-3h9a3 3 0 0 1 3 3v9a3 3 0 0 1-3 3h-2v2a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3v-9a3 3 0 0 1 3-3h2zm2 2h5a3 3 0 0 1 3 3v5h2a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1h-9a1 1 0 0 0-1 1zM5 9a1 1 0 0 0-1 1v9a1 1 0 0 0 1 1h9a1 1 0 0 0 1-1v-9a1 1 0 0 0-1-1z" clip-rule="evenodd"></path></svg></button></span></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre hljs language-python">import yt_dlp
 import os
@@ -109,31 +109,31 @@ if __name__ == "__main__":
     main()
 </code></div></div></pre>
 
-## Usage
+## Utilização
 
-1. **Prepare Your URL File** :
+1. **Prepare seu Arquivo com as URLS** :
 
-* Create a file named `youtube-urls.txt` in the same directory as your script.
-* List each YouTube URL on a new line in this file.
+* Crie um arquivo chamado youtube-urls.txt no mesmo diretório do seu script.
+* Neste arquivo, escreva cada URL do YouTube em uma nova linha.
 
-2. **Run the Script** :
+2. **Execute o Script** :
 
-* Open Command Prompt or Terminal.
-* Navigate to the directory where `download_youtube_videos.py` is located.
-* Run the script with:
+* Abra o Prompt de Comando ou Terminal.
+* Navegue até o diretório onde download_youtube_videos.py está localizado.
+* Execute o script com:
   <pre><div class="dark bg-gray-950 rounded-md border-[0.5px] border-token-border-medium"><div class="flex items-center relative text-token-text-secondary bg-token-main-surface-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md"><div class="flex items-center"><span class="" data-state="closed"><button class="flex gap-1 items-center"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" class="icon-sm"><path fill="currentColor" fill-rule="evenodd" d="M7 5a3 3 0 0 1 3-3h9a3 3 0 0 1 3 3v9a3 3 0 0 1-3 3h-2v2a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3v-9a3 3 0 0 1 3-3h2zm2 2h5a3 3 0 0 1 3 3v5h2a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1h-9a1 1 0 0 0-1 1zM5 9a1 1 0 0 0-1 1v9a1 1 0 0 0 1 1h9a1 1 0 0 0 1-1v-9a1 1 0 0 0-1-1z" clip-rule="evenodd"></path></svg></button></span></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre hljs language-bash">python download_youtube_videos.py
   </code></div></div></pre>
-* The script will read URLs from `youtube-urls.txt`, download each video, and save them in the `downloads` directory.
+* O script lerá as URLs de `youtube-urls.txt`, baixará cada vídeo e os salvará no diretório `downloads`.
 
 ## Troubleshooting
 
 * **Error: `ffmpeg` not installed** :
-  Ensure `ffmpeg` is installed and added to your PATH. Verify with `ffmpeg -version`.
+  Certifique-se de que o ffmpeg está instalado e adicionado ao seu `PATH`. Verifique com o comando `ffmpeg -version`, no CMD ou terminal.
 * **Permission Issues** :
-  Make sure you have write permissions to the `downloads` directory.
+  Certifique-se de que você tem permissões de gravação no diretório `downloads`.
 * **Invalid URL** :
-  Check that URLs in `youtube-urls.txt` are correct and accessible.
+  Verifique se as URLs em `youtube-urls.txt` estão corretas e acessíveis.
 
 ## License
 
-This script is provided as-is with no warranty. Feel free to modify and use it as needed.
+Este script é fornecido como está, sem garantia. Sinta-se à vontade para modificar e usá-lo conforme o necessário.

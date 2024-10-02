@@ -2,6 +2,9 @@
 
 ## Overview
 
+[![en](https://img.shields.io/badge/lang-en-red.svg?style=flat-square)](https://github.com/nothingnothings/simple-youtube-downloader)
+[![pt-br](https://img.shields.io/badge/lang-pt--br-green.svg?style=flat-square)](https://github.com/nothingnothings/simple-youtube-downloader/blob/master/README.pt-br.md)
+
 This Python script downloads YouTube videos from a list of URLs provided in a text file. It uses `yt-dlp`, a powerful and flexible tool for downloading videos from YouTube and other platforms, and requires `ffmpeg` for handling video and audio merging.
 
 ## Features
